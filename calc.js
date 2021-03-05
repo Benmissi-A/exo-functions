@@ -28,6 +28,8 @@ const calc= (nb1,nb2,operator)=>{
       return nb1*nb2
     case '/' :
       return nb1/nb2  
+    default:
+      return 'err'
   }
 
 }

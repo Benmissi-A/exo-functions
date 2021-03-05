@@ -39,7 +39,7 @@ const sortAscend = (array) => {
     tab.splice(x,1)
     tab2.push(nb)
   }
-  return tab2
+  return tab2.reverse('')
 } 
 
 console.log(sortAscend([99, 100, 101, 1]))

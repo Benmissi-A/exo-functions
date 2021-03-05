@@ -13,22 +13,21 @@
 
  console.log(biggest([99, 100, 101, 1])) 
  
- const sortAscend = (array) => {
+/*  const sortAscend = (array) => {
   array.sort((a, b) => a - b)
   return array
 }
+ */
 
-sortAscend([99, 100, 101, 1])
+// le programme ne marhe pas encore
 
- // le programme ne marhe pas encore
-
-/*  const sortAscend = (array) => {
-  let nb=0
-  let x=0
+const sortAscend = (array) => {
   let tab = [...array]
-
+  let x=0
   let tab2 = []
+  
   for(let j=0 ; j < array.length ; j++){
+    let nb=tab[0]
     for(let i = 0 ; i < array.length ; i++ ){
       if(tab[i]>=nb){
         nb = tab[i]
@@ -36,10 +35,11 @@ sortAscend([99, 100, 101, 1])
       }else if(tab[i]===0){
         nb=0
       }
-      console.log(i)
     }
-    tab2.push(nb)
     tab.splice(x,1)
+    tab2.push(nb)
   }
+  return tab2
 } 
- */
+
+console.log(sortAscend([99, 100, 101, 1]))

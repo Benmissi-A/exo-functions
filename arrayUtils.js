@@ -32,9 +32,7 @@ const sortAscend = (array) => {
       if(tab[i]>=nb){
         nb = tab[i]
         x = i
-      }else if(tab[i]===0){
-        nb=0
-      }
+      }else{}
     }
     tab.splice(x,1)
     tab2.push(nb)
@@ -53,15 +51,13 @@ const makeUnique = (array) => {
   for(let j=0 ; j < array.length ; j++){
     let nb=tab[0]
     for(let i = 0 ; i < array.length ; i++ ){
-      if(tab[i]>=nb && !tab2.includes(nb)){
+      if(tab[i]>=nb){
         nb = tab[i]
         x = i
-      }else if(tab[i]===0){
-        nb=0
-      }
+      }else {}
     }
     tab.splice(x,1)
-    tab2.push(nb)
+    if(!tab2.includes(nb)){tab2.push(nb)}
   }
   return tab2.reverse('')
 } 
